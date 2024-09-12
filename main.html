@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meu cartão</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
+        rel='stylesheet'>
+        
+    </head>
+
+    <body>
+
+       <div class="profile-card" id="maincard">
+
+            <div class="image"> 
+                <img src="perfil.jpeg" alt="" class="profile-img">
+            </div>
+    
+
+            <div class="text-data">
+                <span class="name">João Longarai</span>
+                <span class="job">Analista de TI e Dev Front-End.</span>
+            </div>
+        
+
+            <div class="media-buttons"> 
+                <a href="https://www.instagram.com/j.longarai/" style="background: #e1306c;" class="link" target="_blank">
+                    <i class='bx bxl-instagram'></i> <!--adicionar o isnta profissional-->
+                </a>    
+
+                <a href="https://github.com/Sipruf" style="background:#2c2a2a;" class="link" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-longarai-08a54920a/" class="link" target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+            </div>
+
+
+            <div class="buttons">  
+                <button class="button1">Meu email</button> 
+                <button class="button2" id="showBtn" >Sobre mim</button> 
+            </div>
+        
+
+            <div class="analytics"> 
+                <button class="data" id="like">
+                    <i class='bx bx-heart'></i>
+                </button>
+
+                <i id="heart" class='bx bxs-heart'></i>
+
+                <button class="data" id="link"> 
+                    <i class='bx bx-share'></i>
+                    <p class="aviso">Link copiado!</p>  
+                </button>
+            </div>
+
+        </div>    
+
+
+
+        <div class="extracard" id="info"> 
+            <p class="titulo">Uma breve introdução:</p>
+
+            <p class="conteudo">Desde sempre apaixonado por tecnologia e por criar soluções simples e eficientes. <br>
+                Com mais de 3 anos de experiência em TI, com infraestrutura e governança de TI, automações e desenvolvimento Front-End com JavaScript.
+                Se busca inovação e eficiência para o seu negócio, estou à disposição.<br> <br>Vamos conversar? Me envie uma mensagem nas redes ao lado!</br></p>
+
+            <button class="exitbutton" id="hideBtn">Fechar</button> 
+        </div>
+
+
+
+        <script src="script.js"></script>
+    </body>
+</html>

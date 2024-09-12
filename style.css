@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+    --primary-color: #613DC1;
+    --secondary-color: #0e4bf1;
+    --background-color: #1d0424;
+    --text-color: #333;
+    --accent-color: #4070f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    gap: 15px;
+    transition: all 0.5s ease;
+}
+
+.image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    padding: 3px;
+}
+
+.image .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.profile-card .text-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.text-data .name,
+#info .titulo {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.text-data .job,
+#info .conteudo {
+    font-size: 15px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.media-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 34px;
+    width: 43px;
+    border-radius: 50px;
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.buttons .button1:hover{
+    background-color: #4070f4;
+}
+
+.buttons .button1 {
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    background-color: #613DC1;
+    padding: 8px 2px; 
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+
+.buttons .button2 {
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    background-color: #613DC1;
+    padding: 8px 2px; 
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.buttons .button2:hover{
+    background-color: #4070f4;
+}
+
+.button1::before {
+    content: "Email copiado!";
+    position: absolute;
+    font-size: 14px;
+    bottom: -20px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #97DFFC;
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 24px;
+    display: none;
+}
+
+.button1.show::before {
+    display: block;
+}
+
+.analytics {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.analytics .data {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    padding: 0 20px;
+    border: none;
+    background-color: #fff;
+    border-right: 2px solid #e7e7e7;
+    cursor: pointer;
+}
+
+#heart {
+    display: none;
+    padding: 0 20px;
+    position: absolute;
+    font-size: 18px;
+    margin-right: 6px;
+    cursor: pointer;
+    color: rgb(255, 40, 40);
+}
+
+.aviso {
+    position: absolute;
+    font-size: 14px;
+    bottom: -20px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #97DFFC;
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 24px;
+    display: none; 
+}
+
+.data:last-child {
+    border-right: none;
+}
+
+.data i {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+#info {
+    display:none ;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    gap: 15px;
+    animation: fade-in 600ms forwards;
+}
+
+#info .exitbutton {
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    background-color: #613DC1;
+    padding: 8px 2px; 
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3 ease-in-out;
+}
+
+#info .exitbutton:hover{
+    background-color: #4070f4;
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }  
+}
+
+@media (min-width: 600px) {
+    body {
+        transform: scale(1.4);
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        transform: none;
+        overflow: none;
+    }
+}
+
+
